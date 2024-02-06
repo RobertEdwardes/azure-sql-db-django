@@ -90,6 +90,7 @@ WSGI_APPLICATION = 'django-sql-project.wsgi.application'
 # Database connection details
 # https://github.com/microsoft/mssql-django
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+# ODBC Driver https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16
 
 DATABASES = {
     'default': {
@@ -100,7 +101,7 @@ DATABASES = {
         'USER': os.getenv("DB_USER"),
         'PASSWORD': os.getenv("DB_PASSWORD"),
         'OPTIONS': {
-	            'driver': 'ODBC Driver 17 for SQL Server',
+	            'driver': 'ODBC Driver 18 for SQL Server',
 	        },
     }
 
